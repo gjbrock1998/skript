@@ -1,0 +1,18 @@
+#The Auto Smelt Pickaxe will make the pickaxe serve as a furnace when mining.
+on break:
+	player's tool is "&5Auto &5Smelt &5Pick"
+	block is "stone" or "iron ore" or "coal ore" or "diamond ore" or "redstone ore" or "gold ore" or "emerald ore" or "quartz ore" or "cobblestone" or "clay" or "sand" or "redsand"
+		on mine of "stone" give %player% "stone"
+		on mine of "iron ore" give %player% "iron ingot"
+		on mine of "coal ore" give %player% "coal ingot"
+		on mine of "diamond ore" give %player% "diamond"
+		on mine of "redstone ore" give %player% "redstone dust"
+		on mine of "gold ore" give %player% "gold ingot"
+		on mine of "emerald ore" give %player% "emerald"
+		on mine of "quartz ore" give %player% "quartz"
+		on mine of "cobblestone" give %player% "stone"
+		on mine of "clay" give %player% "hardened clay"
+		on mine of "sand" give %player% "glass"
+		on mine of "redsand" give %player% "glass"
+			on use of "&5Auto &5Smelt &5Pick" consume "coal" or "wood plank" or "blaze rod" or "log"
+				stop
